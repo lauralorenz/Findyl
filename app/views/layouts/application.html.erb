@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Findyl</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>Findyl</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <header>
+    <h2>
+      Findyl
+    </h2>
+    <ul>
+      <li><%= home_link %></li>
+      <li>|</li>
+      <li><%= about_link %></li>
+    </ul>
+  </header>
+  <body>
+    <br />
+    <%= yield %>
+  </body>
 </html>
